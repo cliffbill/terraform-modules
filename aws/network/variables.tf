@@ -1,4 +1,4 @@
-variable "name_prefix" {
+﻿variable "name_prefix" {
   type        = string
   description = "Prefijo para los recursos"
   default     = "lab-aws"
@@ -14,6 +14,12 @@ variable "subnet_cidr" {
   type        = string
   description = "CIDR de la subnet"
   default     = "10.0.1.0/24"
+}
+
+variable "availability_zone" {
+  type        = string
+  description = "Zona de disponibilidad opcional para la subnet"
+  default     = null
 }
 
 variable "instance_type" {
