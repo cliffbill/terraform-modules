@@ -30,11 +30,11 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_public_ip" "pip" {
-  name                = "${var.name_prefix}-pip"
-  location            = azurerm_resource_group.rg.location
+  name                = "lab-azure-pip"
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
-  tags                = var.tags
+  location            = azurerm_resource_group.rg.location
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 resource "azurerm_network_interface" "nic" {
