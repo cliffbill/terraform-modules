@@ -7,7 +7,7 @@
 variable "location" {
   type        = string
   description = "Región de Azure"
-  default     = "East US"
+  default     = "eastus"
 }
 
 variable "vnet_cidr" {
