@@ -86,8 +86,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   network_interface_ids = [azurerm_network_interface.nic.id]
 
   admin_ssh_key {
-    username   = var.admin_username
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD... placeholder_key_change_me ..."
+    username   = "azureuser"
+    public_key = file("~/.ssh/azure_lab_key.pub") # O puedes colocar la cadena de texto de tu llave pública directamente aquí entre comillas dobles
   }
 
   os_disk {
