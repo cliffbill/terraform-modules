@@ -36,3 +36,8 @@ variable "tags" {
     ManagedBy   = "terraform"
   }
 }
+
+variable "admin_ssh_key" {
+  type        = string
+  description = "Public SSH key for the Linux Virtual Machine"
+}
